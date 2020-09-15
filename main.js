@@ -10,8 +10,14 @@ function updateTime(){
         hour -= 12;
         format = "PM";
     }
-    else if (hour == 0){
+    else if (hour === 12){
+        format = "PM";
+    }
+    else if (hour === 0){
         hour = 12;
+        format = "AM";
+    }
+    else {
         format = "AM";
     }
     
